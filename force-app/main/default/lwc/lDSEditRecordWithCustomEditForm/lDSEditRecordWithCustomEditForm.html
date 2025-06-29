@@ -1,18 +1,49 @@
 <template>
     <lightning-card title = "Edit Records using LDS Custom Edit Form">
         <div class="slds-m-around_large">
+            <!--To be able to edit record with custom fields/records-->
             <lightning-record-edit-form
                 record-id={recordId}
                 object-api-name={objectApiName}
             >
-                <lightning-input-field field-name="CaseNumber"></lightning-input-field>
-                <lightning-input-field field-name="Priority"></lightning-input-field>
-                <lightning-input-field field-name="Status"></lightning-input-field>
-                <lightning-input-field field-name="Type"></lightning-input-field>
-                <lightning-input-field field-name="Reason"></lightning-input-field>
-                <lightning-input-field field-name="Origin"></lightning-input-field>
+
+                <lightning-messages></lightning-messages>
+
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-2">
+                         <lightning-input-field field-name="CaseNumber"></lightning-input-field>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-input-field field-name="Priority"></lightning-input-field>
+                    </div>
+                     <div class="slds-col slds-size_1-of-2">
+                          <lightning-input-field field-name="Subject"></lightning-input-field>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                           <lightning-input-field field-name="Status"></lightning-input-field>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                          <lightning-input-field field-name="Type"></lightning-input-field>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-input-field field-name="Reason"></lightning-input-field>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                          <lightning-input-field field-name="Origin"></lightning-input-field>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                         <lightning-input-field field-name="SLAViolation__c" required></lightning-input-field>
+                    </div>
+                </div>
+
+                  <!--Buttons go here-->
+
+                <lightning-button type="submit" label="Save" class="slds-m-right_small slds-p-top_small" variant="brand"></lightning-button>
+                <lightning-button type="reset" class="slds-p-top_small"  label="Reset"></lightning-button>
 
             </lightning-record-edit-form>
+
+          
         </div>
 
     </lightning-card>
