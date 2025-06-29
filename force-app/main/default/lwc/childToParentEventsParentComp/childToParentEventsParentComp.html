@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Parent Component(Child To Parent Composition)">
+        <div class="slds-m-around_large">
+             Recieved this value from Child : {selectedProduct} 
+              <br/>{activeEvents.id} - {activeEvents.name}
+               <br/>{timeStamp} 
+                <br/>Product has been curated by : {selectedBy}
+        </div>
+       
+        <c-child-to-parent-events-child-comp onsendproductselected={handleProductSelection}></c-child-to-parent-events-child-comp>
+    </lightning-card>
+</template>

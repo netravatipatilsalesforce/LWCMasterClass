@@ -1,0 +1,47 @@
+<template>
+    <lightning-card  title="My Task List for Today">
+        <p class="slds-p-horizontal_small">
+            <!--HTML iterators - for:each, for:item-->
+            <!--Like this we are using iterators in LWC-->
+            <template for:each={taskList} for:item="eachTask">
+               
+                <div key={eachTask.taskId}>
+                    {eachTask.taskName} -  {eachTask.taskProgress}
+                </div>
+            </template>
+        </p>
+        <p slot="footer">All the Best! Get it going.</p>
+    </lightning-card>
+
+<br>
+<!--Iterators-->
+    <lightning-card  title="My Task List via Iterators">
+        <p class="slds-p-horizontal_small">
+          
+            <template iterator:task={taskList}>
+
+                <!--THIS IS FOR TOP PRIORITY-->
+                <template lwc:if={task.first}>
+                    TOP PRIORITY FOR THE DAY :
+                    <p key={task.value.taskId}>
+                        <b>{task.value.taskName} -  {task.value.taskProgress}</b>
+                    </p>
+                </template>
+            
+                <div key={task.value.taskId}>
+                    {task.value.taskName} -  {task.value.taskProgress}
+                </div>
+
+                <!--THIS IS FOR LEAST PRIORITY-->
+                <template lwc:if={task.last}>
+                    LEAST PRIORITY FOR THE DAY :
+                    <p key={task.value.taskId}>
+                        <b>{task.value.taskName} -  {task.value.taskProgress}</b>
+                    </p>
+                </template>
+
+            </template>
+        </p>
+        <p slot="footer">All the Best! Get it going.</p>
+    </lightning-card>
+</template>

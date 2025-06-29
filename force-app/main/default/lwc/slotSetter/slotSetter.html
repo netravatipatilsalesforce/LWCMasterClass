@@ -1,0 +1,21 @@
+<template>
+     <c-slot-child-setter>
+
+        <div class="slds-m-around_medium">
+            <lightning-card title="Coming from child">
+            This is the child setter component referencing a parent slot data.
+        </lightning-card>
+        </div>
+        <div slot="header" class="slds-m-around_medium">
+            Header
+        </div>
+         <div slot="body" class="slds-m-around_medium">
+            Main Content 
+        </div>
+         <div slot="footer" class="slds-m-around_medium">
+             footer
+        </div>
+        
+        This content is being rendered by the default slot and has not been picked up by any of the named slots.
+     </c-slot-child-setter>
+</template>

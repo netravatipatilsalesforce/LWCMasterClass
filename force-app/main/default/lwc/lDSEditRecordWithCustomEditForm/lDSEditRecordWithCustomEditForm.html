@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title = "Edit Records using LDS Custom Edit Form">
+        <div class="slds-m-around_large">
+            <lightning-record-edit-form
+                record-id={recordId}
+                object-api-name={objectApiName}
+            >
+                <lightning-input-field field-name="CaseNumber"></lightning-input-field>
+                <lightning-input-field field-name="Priority"></lightning-input-field>
+                <lightning-input-field field-name="Status"></lightning-input-field>
+                <lightning-input-field field-name="Type"></lightning-input-field>
+                <lightning-input-field field-name="Reason"></lightning-input-field>
+                <lightning-input-field field-name="Origin"></lightning-input-field>
+
+            </lightning-record-edit-form>
+        </div>
+
+    </lightning-card>
+</template>

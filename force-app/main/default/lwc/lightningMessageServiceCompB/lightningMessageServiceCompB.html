@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Component Using LMS B">
+        <div class="slds-box slds-theme_shade slds-theme_alert-texture slds-align-absolute_center slds-text-heading_small">
+                Entered Name: <b>{userName}</b>
+                <div class="slds-m-top_large">
+                    <!--<c-component-child-to-parent-c onusernamechange={userNameChangeHandler}></c-component-child-to-parent-c>-->
+                    <c-lightning-message-service-comp-c lwc:ref="compC"></c-lightning-message-service-comp-c>
+                 </div>
+         </div>
+         
+    </lightning-card>
+
+
+</template>

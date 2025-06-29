@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Component Using LMS A">
+        <div class="slds-p-around_large">
+
+            <div class="slds-align-absolute_center slds-text-heading_medium">
+                Entered Name: <b>{userName}</b>
+         </div>
+
+            <div class="slds-m-top_large">
+                <c-lightning-message-service-comp-b onusernamechange={userNameChangeHandler}></c-lightning-message-service-comp-b>
+            </div>
+        </div>
+    </lightning-card>
+</template>

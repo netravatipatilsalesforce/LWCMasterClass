@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Parent Life Cycle Hook">
+        <div class="slds-m-around_medium">
+             <p class="slds-m-around_large">Member Name : {memberName}</p>
+             <lightning-button variant="brand" label="Change Name"  onclick={handleChangeEvent} class="slds-m-left_x-small"></lightning-button>
+                <br/>
+             <c-child-life-cycle-hook>{memberAddress}</c-child-life-cycle-hook>
+        </div>
+    </lightning-card>
+</template>

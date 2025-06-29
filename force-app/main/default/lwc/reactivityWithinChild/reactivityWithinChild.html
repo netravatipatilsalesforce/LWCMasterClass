@@ -1,0 +1,17 @@
+<template>
+    <div class="slds-m-around_large">
+         {userAddress} <br/>
+         <template for:each={personalDetails} for:item="detail">
+            <div key= {detail.index}>
+                    GUID from Parent : {detail.guid} <br/>
+                    Personal Detail for : {detail.name} <br/>
+                    Your Balance : {detail.balance} <br/>
+                    <template for:each={detail.friends} for:item="friends">
+                        <p key={detail.id}>{friends.id} - {friends.name} </p>
+                    </template>
+                </div>
+         </template>
+         
+    </div>
+   
+</template>

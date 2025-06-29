@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Component Parent To Child Communication A ">
+       
+        <div class="slds-p-around_large">
+            <lightning-layout multiple-layout>
+    
+                <lightning-layout-item size="9">
+                    <lightning-input type="text" lwc:ref="userName" label="Enter Your Name"></lightning-input>
+                </lightning-layout-item>
+    
+                <lightning-layout-item size="3" class="slds-m-top_large slds-m-left_small">
+                   <lightning-button label="Submit" onclick={submitClickHandler}></lightning-button>
+                </lightning-layout-item>
+    
+            </lightning-layout>
+        <br/>
+            <lightning-layout>
+                <lightning-layout-item size="12" class="slds-m-top_large">
+                    <!--<c-component-child-b user-name={parentUserName}></c-component-child-b>--> 
+                     <c-component-child-b lwc:ref="compB"></c-component-child-b>
+                </lightning-layout-item>
+            </lightning-layout>
+
+        </div>
+
+    </lightning-card>
+</template>
+<!--LWC : ref: This is an easier way to reference and access your LWC elements on the runtime. 
+We will see the performance efficiency of LWC:ref compared with the query selector, as the query 
+selector works with one-by-one selection and LWC: ref directly referenced the object which improves
+ the efficiency and performance of the program.-->

@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Component Using LMS C">
+       
+        <div class="slds-p-around_large">
+            <lightning-layout multiple-layout>
+    
+                <lightning-layout-item size="9">
+                    <lightning-input type="text" lwc:ref="userName" label="Enter Your Name"></lightning-input>
+                </lightning-layout-item>
+    
+                <lightning-layout-item size="3" class="slds-m-top_large slds-m-left_small">
+                   <lightning-button label="Submit" onclick={submitClickHandler}></lightning-button>
+                </lightning-layout-item>
+    
+            </lightning-layout>
+        </div>
+
+    </lightning-card>
+</template>

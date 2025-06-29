@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Component Child To Parent A">
+        <div class="slds-p-around_large">
+
+            <div class="slds-align-absolute_center slds-text-heading_medium">
+                Entered Name: <b>{userName}</b>
+         </div>
+
+            <div class="slds-m-top_large">
+                <c-component-child-to-parent-b onusernamechange={userNameChangeHandler}></c-component-child-to-parent-b>
+            </div>
+        </div>
+    </lightning-card>
+</template>
