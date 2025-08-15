@@ -1,0 +1,11 @@
+<template>
+    
+    <lightning-card title="Search Task By Subject Using Wire Input Parameters">
+
+        <template for:each={taskList} for:item="task">
+            <li class="slds-m-left_small" key={task.Id}>
+                <b>{task.Id}</b> - {task.Subject} - {task.Priority} - {task.ActivityDate}
+            </li>
+        </template>
+    </lightning-card>
+</template>
