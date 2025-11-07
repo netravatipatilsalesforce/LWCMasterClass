@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="My related Task From Account using dependent Wire">
+      <template for:each={taskList} for:item="taskRec">
+         <div key={taskRec.Id} class="slds-m-around_medium">
+            {taskRec.Subject} - {taskRec.ActivityDate} - {taskRec.Description}
+       </div>
+      </template>
+    </lightning-card>
+</template>
+
+
+<!--data i got 
+{
+  "apiName": "Account",
+  "childRelationships": {},
+  "fields": {
+    "Name": {
+      "displayValue": null,
+      "value": "Burlington Textiles Corp of America"
+    }
+  },
+  "id": "001dM00000JiXYQQA3",
+  "lastModifiedById": "005dM000005G9PSQA0",
+  "lastModifiedDate": "2025-05-02T09:42:15.000Z",
+  "recordTypeId": "012000000000000AAA",
+  "recordTypeInfo": null,
+  "systemModstamp": "2025-05-02T09:42:15.000Z"
+}-->
