@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Fetch records using two independent Wire Method">
+        <lightning-card title="My 5 Cases">
+            <template if:true={foundCases} >
+                <template for:each={caseList} for:item="caseRec">
+                    <ul key={caseRec.Id} class="slds-m-left_medium">
+                        <li><b>Origin</b> - {caseRec.Origin}</li>
+                        <li><b>Priority</b> - {caseRec.Priority}</li>
+                        <li><b>Subject</b> - {caseRec.Subject}</li>
+                    </ul>
+                </template>
+            </template>
+        </lightning-card>
+
+        <lightning-card title="My 5 Tasks">
+            <template if:true={foundTasks}>
+                <template for:each={taskList} for:item="taskRec">
+                    <ul key={taskRec.Id} class="slds-m-left_medium">
+                        <li><b>Subject</b> - {taskRec.Subject}</li>
+                        <li><b>Status</b> - {taskRec.Status}</li>
+                        <li><b>ActivityDate</b> - {taskRec.ActivityDate}</li>
+                        <li><b>Description</b> - {taskRec.Description}</li>
+                    </ul>
+                </template>
+            </template>
+        </lightning-card>
+    </lightning-card>
+</template>
