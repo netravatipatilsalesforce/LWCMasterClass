@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Create Account with a Name Display Toast">
+
+        <div class="slds-m-around_large">
+            <lightning-input type="text" value={accountName} onchange={handleNameChange} label="Account Name"></lightning-input>
+            <br/>
+            <lightning-button type="submit" onclick={handleAccountCreation} label="Create" variant="brand"></lightning-button>
+        </div>
+    </lightning-card>
+</template>
